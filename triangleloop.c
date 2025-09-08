@@ -1,16 +1,16 @@
 #include<stdio.h>
-int main(){
-    int i,j,n;
+int main() {
+    int i, j, n;
 
-    printf("enter the row number");
-    scanf("%d",&n);
+    printf("Enter the row number: ");
+    scanf("%d", &n);
 
-    for(i=1;i<=n;i++){
-
-        for(j=1;j<=n;j++){
+    for(i = 1; i <= n; i++) {
+        for(j = 1; j <= i; j++) {   
             printf("*");
         }
         printf("\n");
     }
     return 0;
 }
+
