@@ -6,18 +6,15 @@ int main() {
     int remainder1, remainder2;
     int sum;
 
-    // Read input
     printf("Enter two numbers: ");
     scanf("%d %d", &n1, &n2);
 
-    // Reverse first number
     while (n1 != 0) {
         remainder1 = n1 % 10;
         reversed1 = reversed1 * 10 + remainder1;
         n1 = n1 / 10;
     }
 
-    // Reverse second number
     while (n2 != 0) {
         remainder2 = n2 % 10;
         reversed2 = reversed2 * 10 + remainder2;
