@@ -25,7 +25,7 @@ int main() {
         printf("\n====== LIBRARY MANAGEMENT SYSTEM ======\n");
         printf("1. Add Book\n");
         printf("2. Display All Books\n");
-        printf("3. Search Book\n");
+        printf("3. Search Book by ID\n");
         printf("4. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -62,13 +62,15 @@ void addbook(struct book library[], int *count) {
 
     printf("Enter Book ID: ");
     scanf("%d", &library[*count].id);
+    getchar(); // clear newline from input buffer
 
     printf("Enter Book Title: ");
-    getchar(); // clear buffer
-    scanf(" %[^\n]", library[*count].title);
+    fgets(library[*count].title, sizeof(library[*count].title), stdin);
+    library[*count].title[strcspn(library[*count].title, "\n")] = '\0'; // remove newline
 
     printf("Enter Author Name: ");
-    scanf(" %[^\n]", library[*count].author);
+    fgets(library[*count].author, sizeof(library[*count].author), stdin);
+    library[*count].author[strcspn(library[*count].author, "\n")] = '\0'; // remove newline
 
     printf("Enter Quantity: ");
     scanf("%d", &library[*count].quantity);
