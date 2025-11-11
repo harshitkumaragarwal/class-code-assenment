@@ -1,13 +1,14 @@
 #include <stdio.h>
 
-unsigned long long factorial(int num) {
-    unsigned long long fact = 1;
+ long long factorial(int num) {
+
+    long long fact = 1;
     for (int i = 1; i <= num; i++)
         fact *= i;
     return fact;
 }
 
-unsigned long long binomial_coefficient(int n, int r) {
+ long long binomial_coefficient(int n, int r) {
     return factorial(n) / (factorial(r) * factorial(n - r));
 }
 
