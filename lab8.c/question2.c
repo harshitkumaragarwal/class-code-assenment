@@ -14,11 +14,10 @@ float gross[EMP_COUNT];
     for (int i = 0; i < EMP_COUNT; i++) {
         printf("Employee %d\n", i + 1);
         printf("Enter name: ");
-        scanf("%s", name[i]);  // Reads employee name
+        scanf("%s", name[i]);
         printf("Enter basic pay ");
         scanf("%f", &basic[i]);
 
-        // Calculate DA and Gross salary
         da[i] = 0.52 * basic[i];
         gross[i] = basic[i] + da[i];
     }

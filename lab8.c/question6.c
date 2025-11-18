@@ -9,22 +9,20 @@ int main() {
     float *pFloat = &b;
     char *pChar = &c;
 
-    printf("---- Initial Addresses ----\n");
+    printf("Initial Address");
     printf("pInt   = %p\n", pInt);
     printf("pFloat = %p\n", pFloat);
     printf("pChar  = %p\n", pChar);
-
-    // Pointer increment
+    
     pInt++;
     pFloat++;
     pChar++;
 
-    printf("\n---- After Increment ----\n");
+    printf("After Increment");
     printf("pInt   = %p (increased by %zu bytes)\n", pInt, sizeof(int));
     printf("pFloat = %p (increased by %zu bytes)\n", pFloat, sizeof(float));
     printf("pChar  = %p (increased by %zu bytes)\n", pChar, sizeof(char));
 
-    // Pointer decrement
     pInt--;
     pFloat--;
     pChar--;
