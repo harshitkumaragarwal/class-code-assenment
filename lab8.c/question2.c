@@ -24,7 +24,6 @@ float gross[EMP_COUNT];
 
     // Display results
     printf("\n\nEmployee Name\t\tGross Salary\n");
-    printf("-----------------------------------------\n");
 
     for (int i = 0; i < EMP_COUNT; i++) {
         printf("%-15s\t%.2f\n", name[i], gross[i]);
